@@ -1,0 +1,66 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>io.daniellavoie</groupId>
+	<artifactId>broadleaf-braintree</artifactId>
+
+
+	<name>Braintree Gateway Payment Module </name>
+
+	<description>Braintree Gateway Payment Module </description>
+
+	<properties>
+		<broadleaf.version>5.2.0-GA</broadleaf.version>
+		<braintree.version>2.72.1</braintree.version>
+		<spring-boot.version>1.5.4.RELEASE</spring-boot.version>
+	</properties>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.3</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.braintreepayments.gateway</groupId>
+			<artifactId>braintree-java</artifactId>
+			<version>${braintree.version}</version>
+		</dependency>
+        <dependency>
+            <groupId>org.broadleafcommerce</groupId>
+            <artifactId>broadleaf-framework</artifactId>
+            <version>${broadleaf.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.0.1</version>
+            <scope>provided</scope>
+        </dependency>
+        
+        <dependency>
+        	<groupId>org.springframework.boot</groupId>
+        	<artifactId>spring-boot-starter-test</artifactId>
+        	<version>${spring-boot.version}</version>
+        	<scope>test</scope>
+        </dependency>
+	</dependencies>
+
+	<repositories>
+		<repository>
+			<id>broadleaf</id>
+			<url>http://nexus.broadleafcommerce.org/nexus/content/groups/public/</url>
+		</repository>
+	</repositories>
+	<version>0.0.1-SNAPSHOT</version>
+</project>
